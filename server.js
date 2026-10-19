@@ -6,6 +6,8 @@ const path = require("path");
 const crypto = require("crypto");
 
 const app = express();
+// Render terminates HTTPS at its proxy; trust it so secure session cookies work.
+app.set("trust proxy", 1);
 const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, "data.json");
 
@@ -237,7 +239,5 @@ app.get("/api/exams/:id/results", auth, (req, res) => {
 app.get("*", (req, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
 
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`zimon is running on port ${PORT}`);
-  console.log(`zimon is running at http://localhost:${PORT}`);
-console.log(`Network access: http://YOUR-IP:${PORT}`);
+  console.log(`Azmoon Plus is running on port ${PORT}`);
 });
