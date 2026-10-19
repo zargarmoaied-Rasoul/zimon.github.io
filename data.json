@@ -1,0 +1,38 @@
+{
+  "teachers": [
+    {
+      "id": "a7d8e90c-3846-4431-82d7-2438fa7b07d3",
+      "name": "ras",
+      "email": "zare@gmail.com",
+      "passwordHash": "$2a$12$IC7bQOBadxK.L6EdgEejCObYTsQPo8kWhy2DweZi57zKIIet4NhSG",
+      "createdAt": "2026-10-18T11:10:44.719Z"
+    }
+  ],
+  "exams": [
+    {
+      "id": "d394f6af-4736-4d00-83b5-45c839336aee",
+      "teacherId": "a7d8e90c-3846-4431-82d7-2438fa7b07d3",
+      "title": "3424",
+      "subject": "4234",
+      "duration": 30,
+      "code": "039039",
+      "questions": [
+        {
+          "id": "72cd1bd2-8f1f-42f1-a725-e66576b46f31",
+          "text": "q4323",
+          "type": "choice",
+          "points": 1,
+          "options": [
+            "گزینه اول",
+            "گزینه دوم",
+            "گزینه سوم",
+            "گزینه چهارم"
+          ],
+          "correctIndex": 0
+        }
+      ],
+      "createdAt": "2026-10-18T11:10:57.716Z"
+    }
+  ],
+  "submissions": []
+}
