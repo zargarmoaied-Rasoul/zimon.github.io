@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>zimon | کلاس هوشمند</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" data-view="home">
+        <span class="brand-mark">✦</span>
+        <span><b>zimon</b><small>EXAM PLUS · SMART CLASSROOM</small></span>
+      </a>
+      <div class="top-actions">
+        <span id="accountLabel" class="account-label">فضای آموزشی هوشمند</span>
+        <button id="authButton" class="btn btn-ghost">ورود معلم</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero panel">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> YOUR CLASSROOM, REIMAGINED</span>
+          <h1>امتحان بعدی رو<br><span>تو بساز!</span></h1>
+          <p>امتحان طراحی کن، کد اختصاصی بگیر، برای دانش‌آموزها بفرست و نتیجه‌ها رو یک‌جا ببین.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" data-view="create">＋ ساخت آزمون</button>
+            <button class="btn btn-secondary" data-view="join">ورود دانش‌آموز ←</button>
+          </div>
+          <div class="hero-pills"><span>✦ ساخت آسان</span><span>⌁ کد اختصاصی</span><span>▥ گزارش نمره</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="floating-card card-back"><span class="mini-dot"></span><span class="skeleton wide"></span><span class="skeleton"></span></div>
+          <div class="floating-card card-front">
+            <div class="mock-head"><span class="mock-icon">✎</span><span><b>امتحان ریاضی</b><small>سؤال ۳ از ۱۰</small></span><span class="mock-time">۲۵:۰۰</span></div>
+            <div class="mock-line"></div><p>حاصل عبارت زیر چیست؟</p>
+            <div class="mock-option selected">۲ × ۵ <b>✓</b></div><div class="mock-option">۳ × ۴</div><div class="mock-option">۴ × ۴</div>
+          </div>
+          <div class="float-badge">✦ آماده‌ی درخشیدن!</div>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card"><span class="stat-icon purple">▤</span><div><strong id="statExams">—</strong><small>آزمون‌های من</small></div></article>
+        <article class="stat-card"><span class="stat-icon cyan">♙</span><div><strong id="statSubmissions">—</strong><small>پاسخ‌های ثبت‌شده</small></div></article>
+        <article class="stat-card"><span class="stat-icon green">◉</span><div><strong>۲۴/۷</strong><small>دسترسی به آزمون‌ها</small></div></article>
+      </section>
+
+      <section class="workspace">
+        <aside class="sidebar panel">
+          <p class="side-label">فضای کاری</p>
+          <button class="nav-item active" data-view="home"><span>⌂</span> داشبورد</button>
+          <button class="nav-item" data-view="create"><span>＋</span> ساخت آزمون</button>
+          <button class="nav-item" data-view="exams"><span>▤</span> آزمون‌های من</button>
+          <button class="nav-item" data-view="join"><span>↗</span> ورود دانش‌آموز</button>
+          <button class="nav-item" data-view="results"><span>▥</span> نتایج و نمره‌ها</button>
+          <div class="sidebar-note"><span>✦</span><b>ایده‌ی امروز</b><p>یک آزمون کوتاه بساز و با کد اختصاصی، کلاس رو فعال کن.</p></div>
+        </aside>
+        <section class="content-area">
+          <div id="toast" class="toast hidden" role="status"></div>
+          <section id="view-home" class="view">
+            <div class="section-heading"><div><span class="eyebrow">OVERVIEW</span><h2>خوش اومدی 👋</h2><p>برای شروع، یکی از کارهای زیر رو انتخاب کن.</p></div><button class="btn btn-primary" data-view="create">＋ آزمون جدید</button></div>
+            <div class="quick-grid">
+              <button class="quick-card quick-purple" data-view="create"><span class="quick-icon">✎</span><b>ساخت آزمون جدید</b><small>سؤال تستی و تشریحی اضافه کن</small><span class="quick-arrow">←</span></button>
+              <button class="quick-card quick-blue" data-view="join"><span class="quick-icon">♙</span><b>شرکت در آزمون</b><small>با کدی که معلم داده وارد شو</small><span class="quick-arrow">←</span></button>
+              <button class="quick-card quick-green" data-view="results"><span class="quick-icon">▥</span><b>بررسی نتیجه‌ها</b><small>نمره‌ها و پاسخ‌ها رو ببین</small><span class="quick-arrow">←</span></button>
+            </div>
+            <div class="section-heading compact"><div><h2>آخرین آزمون‌ها</h2><p>آزمون‌هایی که ساختی اینجا نمایش داده می‌شن.</p></div><button class="text-button" data-view="exams">مشاهده همه ←</button></div>
+            <div id="homeExamList" class="exam-list"><div class="empty-state"><span>▤</span><b>هنوز آزمونی ساخته نشده</b><p>اولین آزمونت رو بساز تا اینجا ظاهر بشه.</p><button class="btn btn-secondary" data-view="create">ساخت اولین آزمون</button></div></div>
+          </section>
+
+          <section id="view-auth" class="view hidden">
+            <div class="section-heading"><div><span class="eyebrow">TEACHER ACCOUNT</span><h2 id="authTitle">حساب معلم</h2><p>برای ساخت و مدیریت آزمون‌ها وارد شو یا حساب بساز.</p></div></div>
+            <form id="authForm" class="panel form-panel">
+              <div id="registerNameWrap" class="field hidden"><label for="teacherName">نام معلم</label><input id="teacherName" autocomplete="name" placeholder="مثلاً سارا احمدی"></div>
+              <div class="field"><label for="teacherEmail">ایمیل</label><input id="teacherEmail" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+              <div class="field"><label for="teacherPassword">رمز عبور</label><input id="teacherPassword" type="password" required minlength="8" autocomplete="current-password" placeholder="حداقل ۸ کاراکتر"></div>
+              <button class="btn btn-primary full" type="submit" id="authSubmit">ورود</button>
+              <p class="form-foot"><span id="authSwitchText">حساب نداری؟</span> <button type="button" class="text-button" id="authSwitch">ثبت‌نام معلم</button></p>
+            </form>
+          </section>
+
+          <section id="view-create" class="view hidden">
+            <div class="section-heading"><div><span class="eyebrow">EXAM BUILDER</span><h2>ساخت آزمون جدید</h2><p>اطلاعات آزمون رو وارد کن و هر تعداد سؤال خواستی اضافه کن.</p></div></div>
+            <form id="createForm" class="panel form-panel">
+              <div class="form-grid">
+                <div class="field"><label for="examTitle">عنوان آزمون</label><input id="examTitle" required maxlength="120" placeholder="مثلاً امتحان فصل دوم"></div>
+                <div class="field"><label for="examSubject">نام درس</label><input id="examSubject" required maxlength="80" placeholder="مثلاً علوم"></div>
+                <div class="field"><label for="examDuration">مدت آزمون (دقیقه)</label><input id="examDuration" type="number" min="1" max="600" value="30" required></div>
+              </div>
+              <div class="builder-heading"><div><h3>سؤال‌ها</h3><p>برای هر سؤال، نوع و نمره رو مشخص کن.</p></div><button type="button" class="btn btn-secondary" id="addQuestion">＋ افزودن سؤال</button></div>
+              <div id="questionBuilder" class="question-builder"></div>
+              <button type="submit" class="btn btn-primary full">✦ ساخت و انتشار آزمون</button>
+            </form>
+          </section>
+
+          <section id="view-exams" class="view hidden">
+            <div class="section-heading"><div><span class="eyebrow">MY EXAMS</span><h2>آزمون‌های من</h2><p>کد آزمون رو برای دانش‌آموزها بفرست.</p></div><button class="btn btn-primary" data-view="create">＋ آزمون جدید</button></div>
+            <div id="examList" class="exam-list"></div>
+          </section>
+
+          <section id="view-join" class="view hidden">
+            <div class="section-heading"><div><span class="eyebrow">STUDENT PORTAL</span><h2>ورود به جلسه امتحان</h2><p>نامت و کدی که از معلم گرفتی رو وارد کن.</p></div></div>
+            <form id="joinForm" class="panel form-panel join-form">
+              <div class="field"><label for="studentName">نام و نام خانوادگی</label><input id="studentName" required maxlength="100" placeholder="نام دانش‌آموز"></div>
+              <div class="field"><label for="examCode">کد آزمون</label><input id="examCode" required maxlength="12" placeholder="مثلاً A1B2C3" class="code-input" autocomplete="off"></div>
+              <button class="btn btn-primary full" type="submit">ورود به امتحان ←</button>
+            </form>
+            <div id="studentExam" class="hidden"></div>
+          </section>
+
+          <section id="view-results" class="view hidden">
+            <div class="section-heading"><div><span class="eyebrow">RESULTS & INSIGHTS</span><h2>نتایج و نمره‌ها</h2><p>یک آزمون رو انتخاب کن تا پاسخ‌های دانش‌آموزها رو ببینی.</p></div></div>
+            <div class="panel form-panel"><div class="field"><label for="resultsExamSelect">انتخاب آزمون</label><select id="resultsExamSelect"><option value="">ابتدا آزمون بساز</option></select></div><div id="resultsList" class="results-list"><div class="muted">برای دیدن نتایج، یک آزمون انتخاب کن.</div></div></div>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer><span>✦ipconfigzimon✦</span><span>ساخته‌شده برای یادگیری بهتر</span></footer>
+  </div>
+  <template id="questionTemplate">
+    <article class="question-card">
+      <div class="question-card-head"><span class="question-number">سؤال</span><button type="button" class="remove-question text-button">حذف سؤال ×</button></div>
+      <div class="field"><label>متن سؤال</label><textarea class="q-text" required maxlength="2000" rows="3" placeholder="سؤال خود را بنویس..."></textarea></div>
+      <div class="form-grid small-grid">
+        <div class="field"><label>نوع سؤال</label><select class="q-type"><option value="choice">چهارگزینه‌ای</option><option value="text">تشریحی</option></select></div>
+        <div class="field"><label>نمره سؤال</label><input class="q-points" type="number" min="1" max="100" value="1" required></div>
+      </div>
+      <div class="choice-fields">
+        <div class="field"><label>گزینه‌ها (پاسخ صحیح رو انتخاب کن)</label><div class="options-editor"></div></div>
+      </div>
+      <div class="field hidden correct-wrap"><label>پاسخ صحیح</label><select class="q-correct"></select></div>
+    </article>
+  </template>
+  <script src="/app.js"></script>
+</body>
+</html>
